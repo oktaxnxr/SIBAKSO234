@@ -13,7 +13,10 @@ use Filament\Schemas\Components\Tabs;
 use Filament\Schemas\Components\Tabs\Tab;
 use Filament\Schemas\Schema;
 use Illuminate\Support\Facades\Auth;
+<<<<<<< HEAD
 use App\Models\Pesanan;
+=======
+>>>>>>> c46f660 (initial commit project SIBAKSO)
 
 class ProduksiForm
 {
@@ -26,6 +29,7 @@ class ProduksiForm
                     ->columns(2)
                     ->schema([
 
+<<<<<<< HEAD
                         Select::make('pesanan_ids')
                             ->label('Pesanan')
                             ->options(
@@ -40,6 +44,18 @@ class ProduksiForm
                             ->preload()
                             ->required()
                             ->helperText('Pilih satu atau lebih pesanan untuk diproduksi bersama.'),
+=======
+                        Select::make('pesanan_id')
+                            ->label('Pesanan')
+                            ->relationship(
+                                name: 'pesanan',
+                                titleAttribute: 'nama_pelanggan'
+                            )
+                            ->searchable()
+                            ->preload()
+                            ->required()
+                            ->helperText('Pilih pesanan yang akan diproduksi.'),
+>>>>>>> c46f660 (initial commit project SIBAKSO)
 
                         Select::make('user_id')
                             ->label('Diproduksi Oleh')
@@ -58,11 +74,16 @@ class ProduksiForm
                             ->required(),
 
                         TextInput::make('jumlah_produksi')
+<<<<<<< HEAD
                             ->label('Jumlah Produksi (pcs)')
+=======
+                            ->label('Jumlah Produksi')
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                             ->numeric()
                             ->minValue(1)
                             ->required()
                             ->suffix('pcs'),
+<<<<<<< HEAD
 
                         TextInput::make('total_berat')
                             ->label('Total Berat (gram)')
@@ -70,6 +91,8 @@ class ProduksiForm
                             ->minValue(1)
                             ->required()
                             ->suffix('gr'),
+=======
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                     ]),
 
                 Section::make('Penggunaan Bahan Baku')
@@ -90,22 +113,42 @@ class ProduksiForm
                                     ->required(),
 
                                 TextInput::make('jumlah_digunakan')
+<<<<<<< HEAD
                                     ->label('Jumlah Digunakan (gram)')
                                     ->numeric()
                                     ->minValue(1)
                                     ->required()
                                     ->suffix('gr'),
+=======
+                                    ->label('Jumlah Digunakan')
+                                    ->numeric()
+                                    ->minValue(1)
+                                    ->required(),
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                             ])
                             ->columns(2)
                             ->required(),
                     ]),
 
+<<<<<<< HEAD
                 Section::make('Keterangan')
                     ->columns(1)
+=======
+                Section::make('Keterangan & Alamat')
+                    ->columns(2)
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                     ->schema([
                         Textarea::make('keterangan')
                             ->rows(3)
                             ->placeholder('Tambahkan catatan jika diperlukan...'),
+<<<<<<< HEAD
+=======
+
+                        Textarea::make('pesanan.alamat')
+                            ->label('Alamat Pelanggan')
+                            ->rows(3)
+                            ->placeholder('Alamat lengkap pelanggan...'),
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                     ]),
             ]);
     }

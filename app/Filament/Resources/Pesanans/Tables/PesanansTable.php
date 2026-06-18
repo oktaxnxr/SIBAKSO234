@@ -12,6 +12,10 @@ use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c46f660 (initial commit project SIBAKSO)
 class PesanansTable
 {
     public static function configure(Table $table): Table
@@ -22,6 +26,7 @@ class PesanansTable
                     ->label('Pelanggan')
                     ->searchable()
                     ->sortable(),
+<<<<<<< HEAD
                 TextColumn::make('jumlah')
                     ->numeric()
                     ->sortable(),
@@ -29,10 +34,24 @@ class PesanansTable
                     ->badge()
                     ->color(fn ($state) => $state === 'kg' ? 'info' : 'success')
                     ->formatStateUsing(fn ($state) => $state === 'kg' ? 'Kg' : 'Pcs (200gr)'),
+=======
+               TextColumn::make('jumlah')
+                    ->label('Jumlah')
+                    ->suffix(' kg')
+                    ->sortable(),
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                 TextColumn::make('harga')
                     ->numeric(thousandsSeparator: '.')
                     ->prefix('Rp ')
                     ->sortable(),
+<<<<<<< HEAD
+=======
+                TextColumn::make('pelanggan.alamat')
+                    ->label('Alamat')
+                    ->wrap()
+                    ->searchable()
+                    ->toggleable(),
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                 TextColumn::make('no_hp')
                     ->searchable(),
                 TextColumn::make('tanggal_ambil')

@@ -12,7 +12,10 @@ class Pesanan extends Model
     protected $fillable = [
         'pelanggan_id',
         'jumlah',
+<<<<<<< HEAD
         'satuan',
+=======
+>>>>>>> c46f660 (initial commit project SIBAKSO)
         'harga',
         'alamat',
         'no_hp',
@@ -31,6 +34,7 @@ class Pesanan extends Model
         return $this->belongsTo(Pelanggan::class);
     }
 
+<<<<<<< HEAD
     public function produksis()
     {
         return $this->belongsToMany(Produksi::class, 'produksi_pesanan');
@@ -43,5 +47,17 @@ class Pesanan extends Model
         }
 
         return $this->jumlah * 200;
+=======
+    public function produksi()
+    {
+        return $this->hasOne(Produksi::class);
+    }
+    public function produksis()
+    {
+        return $this->belongsToMany(
+            Produksi::class,
+            'produksi_pesanan'
+        );
+>>>>>>> c46f660 (initial commit project SIBAKSO)
     }
 }

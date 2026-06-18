@@ -19,4 +19,8 @@ class Pelanggan extends Model
     {
         return $this->hasMany(Pesanan::class);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c46f660 (initial commit project SIBAKSO)

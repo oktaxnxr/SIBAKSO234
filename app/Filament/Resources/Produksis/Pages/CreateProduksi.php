@@ -8,6 +8,7 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateProduksi extends CreateRecord
 {
     protected static string $resource = ProduksiResource::class;
+<<<<<<< HEAD
 
     protected function mutateFormDataBeforeCreate(array $data): array
     {
@@ -31,4 +32,6 @@ class CreateProduksi extends CreateRecord
             }
         }
     }
+=======
+>>>>>>> c46f660 (initial commit project SIBAKSO)
 }

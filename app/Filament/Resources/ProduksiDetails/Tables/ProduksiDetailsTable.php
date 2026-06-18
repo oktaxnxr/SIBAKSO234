@@ -18,11 +18,18 @@ class ProduksiDetailsTable
 
             ->columns([
 
+<<<<<<< HEAD
                 TextColumn::make('produksi.pesanans')
                     ->label('Pelanggan')
                     ->formatStateUsing(fn ($record) =>
                         $record->produksi->pesanans->map(fn ($p) => $p->pelanggan?->nama)->implode(', ')
                     )
+=======
+                TextColumn::make('produksi.pesanan.nama_pelanggan')
+                    ->label('Pelanggan')
+                    ->searchable()
+                    ->sortable()
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                     ->weight('bold'),
 
                 TextColumn::make('produksi.user.name')
@@ -69,8 +76,13 @@ class ProduksiDetailsTable
             ->filters([
 
                 SelectFilter::make('produksi_id')
+<<<<<<< HEAD
                     ->relationship('produksi', 'id')
                     ->label('Filter Produksi'),
+=======
+                    ->relationship('produksi.pesanan', 'nama_pelanggan')
+                    ->label('Filter Pelanggan'),
+>>>>>>> c46f660 (initial commit project SIBAKSO)
 
                 SelectFilter::make('bahan_baku_id')
                     ->relationship('bahanBaku', 'nama_bahan')

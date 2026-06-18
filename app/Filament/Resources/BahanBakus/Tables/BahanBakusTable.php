@@ -25,6 +25,7 @@ class BahanBakusTable
                     ->sortable()
                     ->weight('bold'),
 
+<<<<<<< HEAD
                 TextColumn::make('jenis')
                     ->label('Jenis')
                     ->badge()
@@ -35,6 +36,8 @@ class BahanBakusTable
                     })
                     ->color(fn ($state) => $state === 'bahan_utama' ? 'primary' : 'success'),
 
+=======
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                 TextColumn::make('stok')
                     ->label('Stok Saat Ini')
                     ->numeric()

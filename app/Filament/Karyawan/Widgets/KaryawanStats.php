@@ -18,7 +18,11 @@ class KaryawanStats extends StatsOverviewWidget
             Stat::make(
                 'Produksi Aktif',
                 Produksi::where('user_id', $userId)
+<<<<<<< HEAD
                     ->whereHas('pesanans', fn ($q) =>
+=======
+                    ->whereHas('pesanan', fn ($q) =>
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                         $q->where('status_produksi', 'diproduksi')
                     )
                     ->count()
@@ -30,7 +34,11 @@ class KaryawanStats extends StatsOverviewWidget
             Stat::make(
                 'Produksi Selesai',
                 Produksi::where('user_id', $userId)
+<<<<<<< HEAD
                     ->whereHas('pesanans', fn ($q) =>
+=======
+                    ->whereHas('pesanan', fn ($q) =>
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                         $q->where('status_produksi', 'selesai')
                     )
                     ->count()

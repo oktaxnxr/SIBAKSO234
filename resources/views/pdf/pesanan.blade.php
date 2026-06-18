@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
     <meta charset="utf-8">
     <title>Laporan Pesanan</title>
     <style>
@@ -146,3 +147,35 @@
     </div>
 </body>
 </html>
+=======
+    <title>Laporan Pesanan</title>
+</head>
+<body>
+
+<h2 style="text-align:center;">Laporan Pesanan</h2>
+
+<table border="1" width="100%" cellpadding="6" cellspacing="0">
+    <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>Alamat</th>
+        <th>NoHP</th>
+        <th>Tanggal Ambil</th>
+        <th>Status</th>
+    </tr>
+
+    @foreach ($pesanans as $i => $p)
+        <tr>
+            <td>{{ $i + 1 }}</td>
+            <td>{{ $p->pelanggan->nama ?? '-' }}</td>
+            <td>{{ $p->pelanggan->alamat ?? '-' }}</td>
+            <td>{{ $p->pelanggan->nohp ?? '-' }}</td>
+            <td>{{ $p->tanggal_ambil }}</td>
+            <td>{{ $p->status_produksi }}</td>
+        </tr>
+    @endforeach
+</table>
+
+</body>
+</html>
+>>>>>>> c46f660 (initial commit project SIBAKSO)

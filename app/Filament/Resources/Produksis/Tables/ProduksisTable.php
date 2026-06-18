@@ -20,6 +20,7 @@ class ProduksisTable
 
             ->columns([
 
+<<<<<<< HEAD
                 TextColumn::make('pesanans')
                     ->label('Pelanggan')
                     ->formatStateUsing(function ($record) {
@@ -34,6 +35,16 @@ class ProduksisTable
                             number_format($p->jumlah) . ' ' . $p->satuan . ' (' . number_format($p->berat_total_gram) . 'gr)'
                         )->implode(', ');
                     })
+=======
+                TextColumn::make('pesanan.nama_pelanggan')
+                    ->label('Pelanggan')
+                    ->searchable()
+                    ->sortable()
+                    ->weight('bold'),
+
+                TextColumn::make('pesanan.jenis_bakso')
+                    ->label('Jenis Bakso')
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                     ->badge()
                     ->color('primary'),
 
@@ -56,6 +67,7 @@ class ProduksisTable
                     ->color('info')
                     ->formatStateUsing(fn ($state) => number_format($state) . ' pcs'),
 
+<<<<<<< HEAD
                 TextColumn::make('total_berat')
                     ->label('Total Berat')
                     ->numeric()
@@ -71,6 +83,17 @@ class ProduksisTable
                         default => 'warning',
                     })
                     ->getStateUsing(fn ($record) => $record->pesanans->first()?->status_produksi ?? '-'),
+=======
+                TextColumn::make('pesanan.status_produksi')
+                    ->label('Status')
+                    ->badge()
+                    ->color(fn ($state) => match ($state) {
+                        'menunggu' => 'warning',
+                        'diproduksi' => 'primary',
+                        'selesai' => 'success',
+                        default => 'gray',
+                    }),
+>>>>>>> c46f660 (initial commit project SIBAKSO)
 
                 TextColumn::make('created_at')
                     ->label('Dibuat')

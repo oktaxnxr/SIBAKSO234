@@ -126,9 +126,15 @@
                          alt="Bakso Ayam 200 gram"
                          class="h-48 w-full object-cover">
                     <div class="p-6">
+<<<<<<< HEAD
                         <h3 class="font-bold text-2xl mb-2">Bakso Ayam 200 gram</h3>
                         <div class="flex items-center justify-between">
                             <span class="text-red-600 font-bold text-xl">Rp 8.000.00</span>
+=======
+                        <h3 class="font-bold text-2xl mb-2">Bakso Ayam 1 kg</h3>
+                        <div class="flex items-center justify-between">
+                            <span class="text-red-600 font-bold text-xl">Rp 40.000.00</span>
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                             <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full">Tersedia</span>
                         </div>
                     </div>
@@ -139,9 +145,15 @@
                          alt="Bakso Ayam 500 gram"
                          class="h-48 w-full object-cover">
                     <div class="p-6">
+<<<<<<< HEAD
                         <h3 class="font-bold text-2xl mb-2">Bakso ayam 500 gram</h3>
                         <div class="flex items-center justify-between">
                             <span class="text-red-600 font-bold text-xl">Rp 20.000.00</span>
+=======
+                        <h3 class="font-bold text-2xl mb-2">Bakso ayam 2 kg</h3>
+                        <div class="flex items-center justify-between">
+                            <span class="text-red-600 font-bold text-xl">Rp 80.000.00</span>
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                             <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full">Tersedia</span>
                         </div>
                     </div>
@@ -152,9 +164,15 @@
                          alt="Bakso Ayam 1 kg"
                          class="h-48 w-full object-cover">
                     <div class="p-6">
+<<<<<<< HEAD
                         <h3 class="font-bold text-2xl mb-2">Bakso Ayam 1 kg</h3>
                         <div class="flex items-center justify-between">
                             <span class="text-red-600 font-bold text-xl">Rp 40.000.00</span>
+=======
+                        <h3 class="font-bold text-2xl mb-2">Bakso Ayam 5 kg</h3>
+                        <div class="flex items-center justify-between">
+                            <span class="text-red-600 font-bold text-xl">Rp 200.000.00</span>
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                             <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full">Tersedia</span>
                         </div>
                     </div>
@@ -165,9 +183,15 @@
                          alt="Bakso Ayam 2 kg"
                          class="h-48 w-full object-cover">
                     <div class="p-6">
+<<<<<<< HEAD
                         <h3 class="font-bold text-2xl mb-2">Bakso Ayam 2 kg</h3>
                         <div class="flex items-center justify-between">
                             <span class="text-red-600 font-bold text-xl">Rp 80.000.00</span>
+=======
+                        <h3 class="font-bold text-2xl mb-2">Bakso Ayam 10 kg</h3>
+                        <div class="flex items-center justify-between">
+                            <span class="text-red-600 font-bold text-xl">Rp 400.000.00</span>
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                             <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full">Tersedia</span>
                         </div>
                     </div>
@@ -192,7 +216,11 @@
                         <h2 class="text-2xl font-bold text-red-600 mb-2">Owner</h2>
                         <p class="text-3xl font-bold text-gray-800 mb-3">Ibu Sukini</p>
                         <p class="text-gray-600 leading-relaxed max-w-xl">
+<<<<<<< HEAD
                             Berpengalaman lebih dari 5 tahun dalam industri produksi bakso dan pengolahan daging berkualitas. Beliau aktif mengawasi langsung proses produksi untuk menjaga cita rasa yang konsisten.
+=======
+                            Berpengalaman lebih dari 7 tahun dalam industri produksi bakso dan pengolahan daging berkualitas. Beliau aktif mengawasi langsung proses produksi untuk menjaga cita rasa yang konsisten.
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                         </p>
                     </div>
                 </div>
@@ -220,7 +248,11 @@
                     <div class="flex justify-center mb-4">
                         <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center text-red-500 text-2xl"><i class="fas fa-user-circle"></i></div>
                     </div>
+<<<<<<< HEAD
                     <p class="text-gray-600 italic mb-4">"Pelayanan cepat dan kualitas terjamin. Saya beli untuk kebutuhan dapur."</p>
+=======
+                    <p class="text-gray-600 italic mb-4">"Pelayanan cepat dan kualitas terjamin. Saya beli untuk masakan keluarga."</p>
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                     <p class="mt-2 font-semibold text-red-600">- Ibu Sri</p>
                     <p class="text-yellow-400 text-sm">★★★★★</p>
                 </div>
@@ -245,7 +277,11 @@
                     <h3 class="text-2xl font-bold text-red-600 mb-6 flex items-center gap-2"><i class="fas fa-headset"></i> Kontak Kami</h3>
                     <div class="space-y-4 text-gray-700">
                         <p class="flex items-center gap-3"><i class="fas fa-phone-alt w-6 text-red-500"></i> 0813-7236-0154 (WhatsApp)</p>
+<<<<<<< HEAD
                         <p class="flex items-center gap-3"><i class="fas fa-envelope w-6 text-red-500"></i> baksoayam234@gmail.com</p>
+=======
+                        <p class="flex items-center gap-3"><i class="fas fa-envelope w-6 text-red-500"></i> 234baksoayam@gmail.com</p>
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                     </div>
                 </div>
                 <div>

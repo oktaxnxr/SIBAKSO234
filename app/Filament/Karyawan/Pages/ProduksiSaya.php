@@ -10,18 +10,31 @@ use Filament\Notifications\Notification;
 
 class ProduksiSaya extends Page
 {
+<<<<<<< HEAD
     protected string $view = 'filament.karyawan.pages.produksi-saya';
+=======
+    protected  string $view = 'filament.karyawan.pages.produksi-saya';
+>>>>>>> c46f660 (initial commit project SIBAKSO)
 
     protected static ?string $navigationLabel = 'Produksi Saya';
 
     public $bahan_id = null;
     public $jumlah = null;
 
+<<<<<<< HEAD
+=======
+    /*
+    |--------------------------------------------------------------------------
+    | SELESAIKAN PRODUKSI
+    |--------------------------------------------------------------------------
+    */
+>>>>>>> c46f660 (initial commit project SIBAKSO)
     public function selesaikan($id)
     {
         $produksi = Produksi::where('user_id', auth()->id())
             ->findOrFail($id);
 
+<<<<<<< HEAD
         $selesai = true;
         foreach ($produksi->pesanans as $pesanan) {
             if ($pesanan->status_produksi !== 'diproduksi') {
@@ -37,6 +50,15 @@ class ProduksiSaya extends Page
         foreach ($produksi->pesanans as $pesanan) {
             $pesanan->update(['status_produksi' => 'selesai']);
         }
+=======
+        if ($produksi->pesanan->status_produksi !== 'diproduksi') {
+            return;
+        }
+
+        $produksi->pesanan->update([
+            'status_produksi' => 'selesai'
+        ]);
+>>>>>>> c46f660 (initial commit project SIBAKSO)
 
         Notification::make()
             ->title('Produksi berhasil diselesaikan')
@@ -44,8 +66,19 @@ class ProduksiSaya extends Page
             ->send();
     }
 
+<<<<<<< HEAD
     public function tambahBahan($produksiId)
     {
+=======
+    /*
+    |--------------------------------------------------------------------------
+    | TAMBAH BAHAN
+    |--------------------------------------------------------------------------
+    */
+    public function tambahBahan($produksiId)
+    {
+        // Validasi input kosong
+>>>>>>> c46f660 (initial commit project SIBAKSO)
         if (!$this->bahan_id || !$this->jumlah) {
             Notification::make()
                 ->title('Bahan dan jumlah wajib diisi')
@@ -67,6 +100,10 @@ class ProduksiSaya extends Page
 
         $bahan = BahanBaku::findOrFail($this->bahan_id);
 
+<<<<<<< HEAD
+=======
+        // Validasi stok
+>>>>>>> c46f660 (initial commit project SIBAKSO)
         if ($this->jumlah > $bahan->stok) {
             Notification::make()
                 ->title('Stok tidak mencukupi')
@@ -90,6 +127,14 @@ class ProduksiSaya extends Page
         $this->reset(['bahan_id', 'jumlah']);
     }
 
+<<<<<<< HEAD
+=======
+    /*
+    |--------------------------------------------------------------------------
+    | GETTER UNTUK STOK REACTIVE
+    |--------------------------------------------------------------------------
+    */
+>>>>>>> c46f660 (initial commit project SIBAKSO)
     public function getStokBahanProperty()
     {
         if (!$this->bahan_id) {

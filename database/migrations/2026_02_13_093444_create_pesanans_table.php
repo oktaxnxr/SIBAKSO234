@@ -9,8 +9,11 @@ return new class extends Migration
     {
         Schema::create('pesanans', function (Blueprint $table) {
             $table->id();
+<<<<<<< HEAD
             $table->string('nama_pelanggan');
             $table->string('jenis_bakso');
+=======
+>>>>>>> c46f660 (initial commit project SIBAKSO)
             $table->integer('jumlah');
             $table->text('alamat')->nullable();
             $table->string('no_hp')->nullable();

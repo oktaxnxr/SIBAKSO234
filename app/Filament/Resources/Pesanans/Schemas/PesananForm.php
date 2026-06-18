@@ -45,6 +45,7 @@ class PesananForm
                             ->label('No. HP')
                             ->maxLength(20),
                     ]),
+<<<<<<< HEAD
                 Select::make('satuan')
                     ->label('Satuan')
                     ->options(['pcs' => 'Pcs (200gr)', 'kg' => 'Kg (1000gr)'])
@@ -54,6 +55,13 @@ class PesananForm
                     ->label('Jumlah')
                     ->required()
                     ->numeric(),
+=======
+                TextInput::make('jumlah')
+                    ->label('Jumlah (kg)')
+                    ->required()
+                    ->numeric()
+                    ->suffix(' kg'),
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                 TextInput::make('harga')
                     ->numeric()
                     ->prefix('Rp'),

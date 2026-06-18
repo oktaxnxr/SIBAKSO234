@@ -1,4 +1,5 @@
 <x-filament-panels::page>
+<<<<<<< HEAD
     <div class="space-y-4">
 
         @php
@@ -75,9 +76,110 @@
                         Semua pesanan sudah diproduksi atau belum ada pesanan masuk.
                     </p>
                 </div>
+=======
+
+    <div class="space-y-4">
+
+        <x-filament::card>
+
+            <div class="space-y-3">
+
+                <label class="font-semibold">
+                    Pilih Tanggal Pengambilan
+                </label>
+
+                <input
+                    type="date"
+                    wire:model.live="tanggal"
+                    class="w-full rounded-lg border-gray-300"
+                >
+
+                <p class="text-sm text-gray-500">
+                    Jumlah Pesanan: {{ count($pesanans) }}
+                </p>
+
+                <x-filament::button
+                    color="success"
+                    wire:click="ambilTanggal"
+                >
+                    Ambil Pesanan
+                </x-filament::button>
+
+            </div>
+
+        </x-filament::card>
+
+        @if(count($pesanans) > 0)
+
+            <x-filament::card>
+
+                <h2 class="font-bold text-lg mb-4">
+                    Daftar Pesanan Yang Akan Diproduksi
+                </h2>
+
+                @foreach($pesanans as $pesanan)
+
+                    <div class="border-b py-3">
+
+                        <div class="font-semibold text-lg">
+                            {{ $pesanan->pelanggan->nama ?? '-' }}
+                        </div>
+
+                        <div>
+                            Jumlah Pesanan:
+                            {{ $pesanan->jumlah }} kg
+                        </div>
+
+                        <div class="text-sm text-gray-500">
+                            Tanggal Ambil:
+                            {{ $pesanan->tanggal_ambil->format('d M Y') }}
+                        </div>
+
+                        <div class="text-sm">
+                            Status:
+                            {{ $pesanan->status_produksi }}
+                        </div>
+
+                    </div>
+
+                @endforeach
+
+                <div class="mt-4 p-3 bg-gray-100 rounded">
+
+                    <div class="font-bold text-lg">
+                        Total Produksi:
+                        {{ collect($pesanans)->sum('jumlah') }} kg
+                    </div>
+
+                </div>
+
+            </x-filament::card>
+
+        @elseif($tanggal)
+
+            <x-filament::card>
+
+                <div class="text-center py-6">
+
+                    <h2 class="font-semibold text-gray-600">
+                        Tidak ada pesanan untuk tanggal ini
+                    </h2>
+
+                    <p class="text-sm text-gray-500 mt-2">
+                        Pastikan pesanan masih berstatus "menunggu".
+                    </p>
+
+                </div>
+
+>>>>>>> c46f660 (initial commit project SIBAKSO)
             </x-filament::card>
 
         @endif
 
     </div>
+<<<<<<< HEAD
 </x-filament-panels::page>
+=======
+
+</x-filament-panels::page>
+>>>>>>> c46f660 (initial commit project SIBAKSO)

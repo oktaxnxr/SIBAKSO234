@@ -3,8 +3,13 @@
 
         @php
             $produksis = \App\Models\Produksi::where('user_id', auth()->id())
+<<<<<<< HEAD
                 ->whereHas('pesanans', fn ($q) => $q->where('status_produksi', 'diproduksi'))
                 ->with(['pesanans.pelanggan', 'produksiDetails.bahanBaku'])
+=======
+                ->whereHas('pesanan', fn ($q) => $q->where('status_produksi', 'diproduksi'))
+                ->with(['pesanan', 'produksiDetails.bahanBaku'])
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                 ->get();
         @endphp
 
@@ -16,6 +21,7 @@
                 <div class="px-8 py-6 flex justify-between items-start bg-gradient-to-r from-gray-50 to-white">
                     <div>
                         <h2 class="text-2xl font-bold text-gray-800">
+<<<<<<< HEAD
                             Batch Produksi #{{ $produksi->id }}
                         </h2>
                         <p class="text-gray-500 mt-1">
@@ -30,6 +36,14 @@
                                 </span>
                             @endforeach
                         </div>
+=======
+                            {{ $produksi->pesanan->nama_pelanggan }}
+                        </h2>
+                        <p class="text-gray-500 mt-1">
+                            {{ $produksi->pesanan->jenis_bakso }}
+                            • {{ $produksi->jumlah_produksi }} kg
+                        </p>
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                     </div>
 
                     <span class="px-4 py-1 text-sm font-semibold bg-yellow-100 text-yellow-700 rounded-full">
@@ -67,7 +81,11 @@
                                                 <option value="">Pilih Bahan</option>
                                                 @foreach(\App\Models\BahanBaku::all() as $bahan)
                                                     <option value="{{ $bahan->id }}">
+<<<<<<< HEAD
                                                         {{ $bahan->nama_bahan }} ({{ $bahan->jenis === 'bahan_utama' ? 'Utama' : 'Bumbu' }})
+=======
+                                                        {{ $bahan->nama_bahan }}
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                                                     </option>
                                                 @endforeach
                                             </select>
@@ -76,7 +94,11 @@
                                         <td class="px-6 py-4">
                                             @if($this->stokBahan)
                                                 <span class="font-semibold text-gray-800">
+<<<<<<< HEAD
                                                     {{ number_format($this->stokBahan->stok) }}
+=======
+                                                    {{ $this->stokBahan->stok }}
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                                                     {{ $this->stokBahan->satuan }}
                                                 </span>
                                             @else
@@ -89,7 +111,11 @@
                                                 wire:model="jumlah"
                                                 min="1"
                                                 class="w-full rounded-xl border-gray-200 focus:border-primary-500 focus:ring-primary-500 shadow-sm"
+<<<<<<< HEAD
                                                 placeholder="Masukkan jumlah (gram)">
+=======
+                                                placeholder="Masukkan jumlah">
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                                         </td>
 
                                         <td class="px-6 py-4 text-center">
@@ -136,7 +162,11 @@
                                                     {{ $detail->bahanBaku->nama_bahan }}
                                                 </td>
                                                 <td class="px-6 py-4">
+<<<<<<< HEAD
                                                     {{ number_format($detail->jumlah_digunakan) }}
+=======
+                                                    {{ $detail->jumlah_digunakan }}
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                                                     {{ $detail->bahanBaku->satuan }}
                                                 </td>
                                                 <td class="px-6 py-4 text-gray-500 text-xs">
@@ -150,7 +180,12 @@
 
                             <div class="flex justify-end">
                                 <div class="bg-gray-50 px-6 py-3 rounded-xl text-sm font-semibold text-gray-700 shadow-sm">
+<<<<<<< HEAD
                                     Total Jenis Bahan: {{ $produksi->produksiDetails->count() }}
+=======
+                                    Total Jenis Bahan:
+                                    {{ $produksi->produksiDetails->count() }}
+>>>>>>> c46f660 (initial commit project SIBAKSO)
                                 </div>
                             </div>
                         </div>

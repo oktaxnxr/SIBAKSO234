@@ -14,7 +14,10 @@ class BahanBaku extends Model
         'nama_bahan',
         'stok',
         'satuan',
+<<<<<<< HEAD
         'jenis',
+=======
+>>>>>>> c46f660 (initial commit project SIBAKSO)
         'minimum_stok',
     ];
 

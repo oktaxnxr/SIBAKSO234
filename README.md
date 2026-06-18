@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c46f660 (initial commit project SIBAKSO)
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -58,7 +61,10 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<<<<<<< HEAD
 =======
 # SIBAKSO234
 sistem informasi bakso ayam 234
 >>>>>>> 8298ee6f8ceec831408c61772b89889e87bc1b93
+=======
+>>>>>>> c46f660 (initial commit project SIBAKSO)

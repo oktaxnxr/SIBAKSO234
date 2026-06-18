@@ -18,6 +18,13 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
+<<<<<<< HEAD
+=======
+        // =============================
+        // 1️⃣ USER
+        // =============================
+
+>>>>>>> c46f660 (initial commit project SIBAKSO)
         $admin = User::create([
             'name' => 'Admin Bakso',
             'email' => 'admin234@bakso.com',
@@ -32,6 +39,7 @@ class DatabaseSeeder extends Seeder
             'role' => 'karyawan',
         ]);
 
+<<<<<<< HEAD
         Auth::login($karyawan);
 
         $tepung = BahanBaku::create([
@@ -40,10 +48,25 @@ class DatabaseSeeder extends Seeder
             'satuan' => 'gram',
             'jenis' => 'bahan_utama',
             'minimum_stok' => 10000,
+=======
+        // 🔥 SIMULASI LOGIN KARYAWAN
+        Auth::login($karyawan);
+
+        // =============================
+        // 2️⃣ BAHAN BAKU
+        // =============================
+
+        $tepung = BahanBaku::create([
+            'nama_bahan' => 'Tepung',
+            'stok' => 50,
+            'satuan' => 'kg',
+            'minimum_stok' => 10,
+>>>>>>> c46f660 (initial commit project SIBAKSO)
         ]);
 
         $daging = BahanBaku::create([
             'nama_bahan' => 'Daging Ayam',
+<<<<<<< HEAD
             'stok' => 40000,
             'satuan' => 'gram',
             'jenis' => 'bahan_utama',
@@ -65,6 +88,23 @@ class DatabaseSeeder extends Seeder
             'jenis' => 'bahan_utama',
             'minimum_stok' => 10,
         ]);
+=======
+            'stok' => 40,
+            'satuan' => 'kg',
+            'minimum_stok' => 8,
+        ]);
+
+        $bumbu = BahanBaku::create([
+            'nama_bahan' => 'Bumbu',
+            'stok' => 20,
+            'satuan' => 'kg',
+            'minimum_stok' => 5,
+        ]);
+
+        // =============================
+        // 3️⃣ PEMASOK
+        // =============================
+>>>>>>> c46f660 (initial commit project SIBAKSO)
 
         $pemasok1 = Pemasok::create([
             'nama_toko' => 'Toko Tepung Sejahtera',
@@ -78,10 +118,21 @@ class DatabaseSeeder extends Seeder
             'nohp' => '081298765432',
         ]);
 
+<<<<<<< HEAD
         Pembelian::create([
             'pemasok_id' => $pemasok1->id,
             'bahan_baku_id' => $tepung->id,
             'jumlah' => 10000,
+=======
+        // =============================
+        // 4️⃣ PEMBELIAN (otomatis nambah stok)
+        // =============================
+
+        Pembelian::create([
+            'pemasok_id' => $pemasok1->id,
+            'bahan_baku_id' => $tepung->id,
+            'jumlah' => 10,
+>>>>>>> c46f660 (initial commit project SIBAKSO)
             'tgl_beli' => now(),
             'harga' => 150000,
         ]);
@@ -89,17 +140,30 @@ class DatabaseSeeder extends Seeder
         Pembelian::create([
             'pemasok_id' => $pemasok2->id,
             'bahan_baku_id' => $daging->id,
+<<<<<<< HEAD
             'jumlah' => 8000,
+=======
+            'jumlah' => 8,
+>>>>>>> c46f660 (initial commit project SIBAKSO)
             'tgl_beli' => now(),
             'harga' => 320000,
         ]);
 
+<<<<<<< HEAD
         $pelanggan1 = Pelanggan::create([
+=======
+        // =============================
+        // 5️⃣ PELANGGAN
+        // =============================
+
+        $pelanggan = Pelanggan::create([
+>>>>>>> c46f660 (initial commit project SIBAKSO)
             'nama' => 'Andi',
             'alamat' => 'Bangkinang',
             'nohp' => '081234567890',
         ]);
 
+<<<<<<< HEAD
         $pelanggan2 = Pelanggan::create([
             'nama' => 'Siti',
             'alamat' => 'Bangkinang Kota',
@@ -110,10 +174,20 @@ class DatabaseSeeder extends Seeder
             'pelanggan_id' => $pelanggan1->id,
             'jumlah' => 100,
             'satuan' => 'pcs',
+=======
+        // =============================
+        // 6️⃣ PESANAN
+        // =============================
+
+        $pesanan = Pesanan::create([
+            'pelanggan_id' => $pelanggan->id,
+            'jumlah' => 10,
+>>>>>>> c46f660 (initial commit project SIBAKSO)
             'alamat' => 'Bangkinang',
             'no_hp' => '081234567890',
             'tanggal_ambil' => now()->addDay(),
             'status_pembayaran' => 'lunas',
+<<<<<<< HEAD
             'status_produksi' => 'menunggu',
         ]);
 
@@ -141,25 +215,60 @@ class DatabaseSeeder extends Seeder
 
         $pesanan1->update(['status_produksi' => 'diproduksi']);
         $pesanan2->update(['status_produksi' => 'diproduksi']);
+=======
+            'status_produksi' => 'diproduksi',
+        ]);
+
+        // =============================
+        // 7️⃣ PRODUKSI
+        // =============================
+
+        $produksi = Produksi::create([
+            'pesanan_id' => $pesanan->id,
+            'user_id' => $karyawan->id,
+            'tanggal_produksi' => now(),
+            'jumlah_produksi' => 10,
+            'keterangan' => 'Produksi pagi hari',
+        ]);
+
+        // =============================
+        // 8️⃣ PRODUKSI DETAIL
+        // =============================
+>>>>>>> c46f660 (initial commit project SIBAKSO)
 
         ProduksiDetail::create([
             'produksi_id' => $produksi->id,
             'bahan_baku_id' => $tepung->id,
+<<<<<<< HEAD
             'jumlah_digunakan' => 5000,
+=======
+            'jumlah_digunakan' => 5,
+>>>>>>> c46f660 (initial commit project SIBAKSO)
         ]);
 
         ProduksiDetail::create([
             'produksi_id' => $produksi->id,
             'bahan_baku_id' => $daging->id,
+<<<<<<< HEAD
             'jumlah_digunakan' => 7000,
+=======
+            'jumlah_digunakan' => 7,
+>>>>>>> c46f660 (initial commit project SIBAKSO)
         ]);
 
         ProduksiDetail::create([
             'produksi_id' => $produksi->id,
             'bahan_baku_id' => $bumbu->id,
+<<<<<<< HEAD
             'jumlah_digunakan' => 2000,
         ]);
 
+=======
+            'jumlah_digunakan' => 2,
+        ]);
+
+        // Logout setelah selesai
+>>>>>>> c46f660 (initial commit project SIBAKSO)
         Auth::logout();
     }
 }
